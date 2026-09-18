@@ -25,9 +25,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version  = 2026062400;
+$plugin->version  = 2026060401;
 $plugin->requires  = 2023100900; // Moodle 4.3.
 $plugin->supported = [403, 502];
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release = '1.53 for Moodle 4.3-5.2 (Build: 2026062400)';
+$plugin->release = '1.53-dev for Moodle 4.3-5.2 (Build: 2026060401)';
 $plugin->component = 'mod_choicegroup';

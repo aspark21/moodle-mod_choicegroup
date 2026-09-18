@@ -214,7 +214,8 @@ class mod_choicegroup_renderer extends plugin_renderer_base {
                 )),
                 ['class' => "choicegroups-descriptions {$hidden}"]
             );
-            if ($disabled) {
+
+            if (!$multipleenrollmentspossible && !empty($options['allowupdate'])) {
                 $option->attributes->disabled = true;
             }
 
@@ -268,10 +269,7 @@ class mod_choicegroup_renderer extends plugin_renderer_base {
                 }
             }
 
-            if (
-                !empty($options['allowupdate']) && ($options['allowupdate']) &&
-                !($multipleenrollmentspossible == 1) && !$disabled
-            ) {
+            if (!empty($options['allowupdate']) && !$multipleenrollmentspossible && !$disabled) {
                 $url = new moodle_url('view.php', ['id' => $coursemoduleid, 'action' => 'delchoicegroup', 'sesskey' => sesskey()]);
                 $html .= ' ' . html_writer::link($url, get_string('removemychoicegroup', 'choicegroup'));
             }

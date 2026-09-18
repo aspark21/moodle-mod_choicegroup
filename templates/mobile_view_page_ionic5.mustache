@@ -144,16 +144,14 @@
                 <ion-col class="bold">
                     {{ 'plugin.mod_choicegroup.group' | translate }}
                 </ion-col>
-                <%# choicegroup.showresultscolumn %>
-                    <ion-col size="3" class="bold ion-justify-content-center ion-align-items-center ion-text-center">
-                        <%^ choicegroup.limitanswers %>
-                            {{ 'plugin.mod_choicegroup.members/' | translate }}
-                        <%/ choicegroup.limitanswers %>
-                        <%# choicegroup.limitanswers %>
-                            {{ 'plugin.mod_choicegroup.members/max' | translate }}
-                        <%/ choicegroup.limitanswers %>
-                    </ion-col>
-                <%/ choicegroup.showresultscolumn %>
+                <ion-col size="3" class="bold ion-justify-content-center ion-align-items-center ion-text-center">
+                    <%^ choicegroup.limitanswers %>
+                        {{ 'plugin.mod_choicegroup.members/' | translate }}
+                    <%/ choicegroup.limitanswers %>
+                    <%# choicegroup.limitanswers %>
+                        {{ 'plugin.mod_choicegroup.members/max' | translate }}
+                    <%/ choicegroup.limitanswers %>
+                </ion-col>
             </ion-row>
 
             <ion-list>
@@ -179,12 +177,10 @@
                             </ion-item>
                         </ion-col>
 
-                        <%# choicegroup.showresultscolumn %>
-                            <ion-col size="3" class="ion-justify-content-center ion-align-items-center ion-text-center">
-                                <% countanswers %>
-                                <%# choicegroup.limitanswers %> / <% maxanswers %> <%/ choicegroup.limitanswers %>
-                            </ion-col>
-                        <%/ choicegroup.showresultscolumn %>
+                        <ion-col size="3" class="ion-justify-content-center ion-align-items-center ion-text-center">
+                            <% countanswers %>
+                            <%# choicegroup.limitanswers %> / <% maxanswers %> <%/ choicegroup.limitanswers %>
+                        </ion-col>
                     </ion-row>
                 <%/ options %>
             <%^ choicegroup.multipleenrollmentspossible %>
